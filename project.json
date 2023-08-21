@@ -92,5 +92,5 @@
       }
     }
   },
-  "implicitDependencies": ["material-bundle"]
+  "implicitDependencies": ["material-bundle", "layout"]
 }

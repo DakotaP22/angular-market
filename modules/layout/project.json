@@ -1,5 +1,5 @@
 {
-  "name": "modules-layout",
+  "name": "layout",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "modules/layout/src",
   "prefix": "lib",
