@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,11 +7,9 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class NavbarComponent {
-  @Input() itemsIntCart = 0;
-
-  onTest() {
-    console.log('test');
-  }
+  @Input({ required: true }) title!: string;
+  @Input() itemsInCart = 0;
 }
