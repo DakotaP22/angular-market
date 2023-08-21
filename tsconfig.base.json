@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "modules/layout": ["modules/layout/src/index.ts"]
+      "@angular-market/material-ui-kit/material-bundle": [
+        "./modules/material-ui-kit/material-bundle/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

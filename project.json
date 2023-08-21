@@ -16,8 +16,13 @@
         "polyfills": ["zone.js"],
         "tsConfig": "./tsconfig.app.json",
         "assets": ["./src/favicon.ico", "./src/assets"],
-        "styles": ["./src/styles.scss"],
-        "scripts": []
+        "styles": [
+          "./src/styles.scss",
+          "./modules/material-ui-kit/material-bundle/src/lib/css/theme.css"
+        ],
+        "scripts": [
+          "./modules/material-ui-kit/material-bundle/src/index.js"
+        ]
       },
       "configurations": {
         "production": {
@@ -47,6 +52,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
+      "dependsOn": ["material-bundle:build"],
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
@@ -85,5 +91,6 @@
         }
       }
     }
-  }
+  },
+  "implicitDependencies": ["material-bundle"]
 }

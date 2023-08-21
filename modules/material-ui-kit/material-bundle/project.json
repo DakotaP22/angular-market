@@ -1,0 +1,16 @@
+{
+  "name": "material-bundle",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "modules/material-ui-kit/material-bundle/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+        "executor": "nx:run-script",
+        "options": {
+          "script": "build"
+        }
+      
+    }
+  },
+  "tags": []
+}
