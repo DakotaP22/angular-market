@@ -46,4 +46,12 @@
   }
   
   
-  
+.cart {
+  position: relative;
+
+  .cart-count {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+  }
+}  

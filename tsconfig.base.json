@@ -15,13 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-market/layout": ["./modules/layout/src/index.ts"],
       "@angular-market/material-ui-kit/material-bundle": [
         "./modules/material-ui-kit/material-bundle/src/index.ts"
       ],
-      "@angular-market/layout": [
-        "./modules/layout/src/index.ts"
-      ]
-      
+      "features/cart": ["features/cart/src/index.ts"],
+      "modules/cart/cart": ["modules/cart/cart/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,9 +1,21 @@
 <header class="surface-5">
-  <p class="display-large on-surface-text">{{ title }}</p>
-  <nav>
+  <p
+    class="display-large on-surface-text"
+    data-testid="title"
+  >
+    {{ title }}
+  </p>
+  <nav data-testid="nav-section">
     <ng-content />
   </nav>
   <div class="cart">
     <md-icon class="icon">shopping_cart</md-icon>
+    <p
+      *ngIf="itemsInCart > 0"
+      class="cart-count body-large on-surface-text"
+      data-testid="cart-count"
+    >
+      {{ itemsInCart }}
+    </p>
   </div>
 </header>

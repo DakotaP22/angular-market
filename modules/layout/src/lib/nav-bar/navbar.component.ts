@@ -11,5 +11,5 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent {
   @Input({ required: true }) title!: string;
-  @Input() itemsInCart = 0;
+  @Input() itemsInCart = 10;
 }

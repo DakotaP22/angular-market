@@ -17,6 +17,10 @@
         "ci": {
           "ci": true,
           "codeCoverage": true
+        }, 
+        "tdd": {
+          "watch": true,
+          "onlyChanged": true
         }
       }
     },
