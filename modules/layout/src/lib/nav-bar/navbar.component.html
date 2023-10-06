@@ -1,13 +1,18 @@
 <header class="surface-5">
+  <!-- Title -->
   <p
     class="display-large on-surface-text"
     data-testid="title"
   >
     {{ title }}
   </p>
+
+  <!-- Nav Section w/ Projected Content -->
   <nav data-testid="nav-section">
     <ng-content />
   </nav>
+  
+  <!-- Cart Icon -->
   <div class="cart">
     <md-icon class="icon">shopping_cart</md-icon>
     <p
