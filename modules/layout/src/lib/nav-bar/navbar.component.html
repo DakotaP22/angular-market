@@ -13,7 +13,7 @@
   </nav>
   
   <!-- Cart Icon -->
-  <div class="cart">
+  <div class="cart" data-testid="cart-icon" *ngIf="showIcon">
     <md-icon class="icon">shopping_cart</md-icon>
     <p
       *ngIf="itemsInCart > 0"

@@ -18,7 +18,6 @@ class TestHostComponent {}
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
   let fixture: ComponentFixture<NavbarComponent>;
-  let testHost: TestHostComponent;
   let testHostFixture: ComponentFixture<TestHostComponent>;
 
   beforeEach(async () => {
@@ -29,7 +28,6 @@ describe('NavbarComponent', () => {
     fixture = TestBed.createComponent(NavbarComponent);
     testHostFixture = TestBed.createComponent(TestHostComponent);
     component = fixture.componentInstance;
-    testHost = testHostFixture.componentInstance;
     fixture.detectChanges();
     testHostFixture.detectChanges();
   });
@@ -51,6 +49,7 @@ describe('NavbarComponent', () => {
   it('should display the number of items passed to the "itemsInCart" input', () => {
     const itemsInCart = 10;
     component.itemsInCart = itemsInCart;
+    component.showIcon = true;
     fixture.detectChanges();
     const element = fixture.nativeElement.querySelector(
       '[data-testid="cart-count"]'
@@ -72,6 +71,7 @@ describe('NavbarComponent', () => {
     // repeat test for itemsInCart < 0
     const itemsInCart2 = -1;
     component.itemsInCart = itemsInCart2;
+    component.showIcon = true;
     fixture.detectChanges();
     const element2 = fixture.nativeElement.querySelector(
       '[data-testid="cart-count"]'
@@ -85,5 +85,30 @@ describe('NavbarComponent', () => {
       '[data-testid="nav-section"]'
     );
     expect(element.innerHTML).toBeTruthy();
+  });
+
+  it('should not display the cart icon by default', () => {
+    const element = fixture.nativeElement.querySelector(
+      '[data-testid="cart-icon"]'
+    );
+    expect(element).toBeNull();
+  });
+
+  it('should display icon if "showIcon" input is true', () => {
+    component.showIcon = true;
+    fixture.detectChanges();
+    const element = fixture.nativeElement.querySelector(
+      '[data-testid="cart-icon"]'
+    );
+    expect(element).toBeTruthy();
+  });
+
+  it('should not display icon if "showIcon" input is false', () => {
+    component.showIcon = false;
+    fixture.detectChanges();
+    const element = fixture.nativeElement.querySelector(
+      '[data-testid="cart-icon"]'
+    );
+    expect(element).toBeNull();
   });
 });
