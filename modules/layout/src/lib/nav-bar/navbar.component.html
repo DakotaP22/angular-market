@@ -11,9 +11,13 @@
   <nav data-testid="nav-section">
     <ng-content />
   </nav>
-  
+
   <!-- Cart Icon -->
-  <div class="cart" data-testid="cart-icon" *ngIf="showIcon">
+  <div
+    *ngIf="showIcon"
+    class="cart"
+    data-testid="cart-icon"
+  >
     <md-icon class="icon">shopping_cart</md-icon>
     <p
       *ngIf="itemsInCart > 0"

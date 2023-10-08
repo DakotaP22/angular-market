@@ -1,7 +1,10 @@
-<layout-navbar
-  title="Angular Market"
-  [itemsInCart]="10"
->
+<layout-navbar title="Angular Market" [itemsInCart]="10" [showIcon]="true">
+  <ul>
+    <a href="/shop/meat-and-seafood">Meat & Seafood</a>
+    <a href="/shop/meat-and-seafood">Bakery</a>
+    <a href="/shop/meat-and-seafood">Dairy</a>
+    <a href="/shop/meat-and-seafood">Produce</a>
+  </ul>
 </layout-navbar>
 
 <router-outlet></router-outlet>
